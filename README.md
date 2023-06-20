@@ -1,6 +1,8 @@
 # Solving-Burger-s-Equation-using-Physics-Informed-Neural-Networks
 Solved Burger's Equation using Physics Informed Neural Network in PyTorch
 
+Refer to the presentation in the repository for better understanding of the problem statement
+
 Procedure Used to implement PINNs for Solving Burger’s Equation
 
 1. Data Preparation:
