@@ -1,29 +1,23 @@
-# Solving-Burger-s-Equation-using-Physics-Informed-Neural-Networks
+The differential equation along with its domain of definition and boundary conditions is already given in the notebook with a brief introduction to Physics Informed Neural Networks and how they are used to solve Burger's Equation.
 
-Solution to Burger's Equation using Physics Informed Neural Network
+Here, I will be covering some details regarding the Data Generating Process:
 
-The differential equation along with it's domain of definition and boundary conditions is already given in the notebook with a brief introduction to Physics Informed Neural Networks and how they are used to solve Burger's Equation.
+When we talk about data here, we just mean the points that we are sampling in order to use for training the Neural Network.
 
-Here, I will be covering some details regarding Data Generating Process:
+As the Neural Network NN(x,t) ~ u(x,t), and u(x,t) is just the solution of our differential equation.
 
-When we talk about data here, We just mean the points that we are sampling in order to use for training the Neural Network.
+So, we are sampling some boundary condition points and some general points in the domain of definition in order to impose the rules governed by our PDE (including boundary conditions) to our Neural Network.
 
-As the Neural Network NN(x,t) ~ u(x,t) and u(x,t) is just the solution of our differential equation.
+### How sampled points for boundary/initial conditions look like:
 
-So we are sampling some boundary condition points, some general points in the domain of definition in order to impose the rules governed by our PDE(including boundary conditions) to our Neural Network.
+| X_u     | t_u        | U_train    |
+|---------|------------|------------|
+| +1      | [0,1]      | 0          |
+| -1      | [0,1]      | 0          |
+| [-1,1]  | 0          | -sin(pi*X_u)|
 
-How sampled points for boundary/initial conditions look like:
+### How general sampled points look like:
 
-
-  X_u     | t_u        | U_train
-	       |	           |
-  +1      | [0,1]      | 0
-  -1      | [0,1]      | 0
-  [-1,1]  | 0          | -sin(pie(X_u)
-  
-How general sampled points look like:
-
-  X_f     |   t_f
-	       |  
-  [-1,1]  |  [0,1]
-  
+| X_f     | t_f        |
+|---------|------------|
+| [-1,1]  | [0,1]      |
