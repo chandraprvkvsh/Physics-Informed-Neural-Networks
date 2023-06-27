@@ -8,13 +8,15 @@ As the Neural Network NN(x,t) ~ u(x,t), and u(x,t) is just the solution of our d
 
 So, we are sampling some boundary condition points and some general points in the domain of definition in order to impose the rules governed by our PDE (including boundary conditions) to our Neural Network.
 
+Note that we are using g(x) = -sin(πx)
+
 ### How sampled points for boundary/initial conditions look like:
 
 | X_u     | t_u        | U_train    |
 |---------|------------|------------|
 | +1      | [0,1]      | 0          |
 | -1      | [0,1]      | 0          |
-| [-1,1]  | 0          | -sin(pi*X_u)|
+| [-1,1]  | 0          | g(x)       |
 
 ### How general sampled points look like:
 
