@@ -1,3 +1,5 @@
+For now, We have limited our scope to only Burger's Equation but similar procedure can be applied to solve any differential equation, Regardless of it being even highly non-linear.
+
 The differential equation along with its domain of definition and boundary conditions is already given in the notebook with a brief introduction to Physics Informed Neural Networks and how they are used to solve Burger's Equation.
 
 Here, I will be covering some details regarding the Data Generating Process:
