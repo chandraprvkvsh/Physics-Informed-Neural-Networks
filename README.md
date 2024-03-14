@@ -1,27 +1,41 @@
-For now, We have limited our scope to only Burger's Equation but similar procedure can be applied to solve any differential equation, Regardless of it being even highly non-linear.
+# Physics Informed Neural Networks (PINNs) for Solving Burger's Equation
 
-The differential equation along with its domain of definition and boundary conditions is already given in the notebook with a brief introduction to Physics Informed Neural Networks and how they are used to solve Burger's Equation.
+This project focuses on utilizing Physics Informed Neural Networks (PINNs) to solve Burger's Equation. While the scope is currently limited to Burger's Equation, the methodology can be extended to solve various types of differential equations, including highly non-linear ones.
 
-Here, I will be covering some details regarding the Data Generating Process:
+## Introduction
 
-When we talk about data here, we just mean the points that we are sampling in order to use for training the Neural Network.
+In the provided notebook, you will find the Burger's Equation along with its domain of definition and boundary conditions. Additionally, there's a brief overview of Physics Informed Neural Networks and their application in solving Burger's Equation.
 
-As the Neural Network NN(x,t) ~ u(x,t), and u(x,t) is just the solution of our differential equation.
+## Data Generating Process
 
-So, we are sampling some boundary condition points and some general points in the domain of definition in order to impose the rules governed by our PDE (including boundary conditions) to our Neural Network.
+In this section, we delve into the process of generating data for training the Neural Network. The term "data" here refers to the points sampled to train the Neural Network. Since the Neural Network, denoted as NN(x,t), approximates the solution u(x,t) of our differential equation, the sampling process is crucial.
 
-Note that we are using g(x) = -sin(πx)
+### Boundary and Initial Conditions
 
-### How sampled points for boundary/initial conditions look like:
+We sample points for boundary and initial conditions to ensure that the Neural Network adheres to the rules dictated by our Partial Differential Equation (PDE), including the boundary conditions. 
 
-| X_u     | t_u        | U_train    |
-|---------|------------|------------|
-| +1      | [0,1]      | 0          |
-| -1      | [0,1]      | 0          |
-| [-1,1]  | 0          | g(x)       |
+#### Sampled Points for Boundary/Initial Conditions
 
-### How general sampled points look like:
+| X_u   | t_u      | U_train |
+|-------|----------|---------|
+| +1    | [0,1]    | 0       |
+| -1    | [0,1]    | 0       |
+| [-1,1]| 0        | g(x)    |
 
-| X_f     | t_f        |
-|---------|------------|
-| [-1,1]  | [0,1]      |
+Here, `g(x) = -sin(πx)` represents the prescribed function for the boundary condition.
+
+### General Sampled Points
+
+In addition to boundary and initial conditions, we sample general points within the domain of definition to provide more data for training.
+
+#### Sampled General Points
+
+| X_f   | t_f      |
+|-------|----------|
+| [-1,1]| [0,1]    |
+
+These sampled points help in capturing the behavior of the solution throughout the domain.
+
+## Conclusion
+
+This README provides an overview of the project, focusing on the methodology of using Physics Informed Neural Networks to solve Burger's Equation and the process of generating data for training the network. For further details and implementation, refer to the provided notebook.
