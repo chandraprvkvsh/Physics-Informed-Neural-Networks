@@ -1,6 +1,6 @@
-# Physics Informed Neural Networks (PINNs) for Solving Burger's Equation
+# Physics Informed Neural Networks (PINNs)
 
-This project focuses on utilizing Physics Informed Neural Networks (PINNs) to solve Burger's Equation. While the scope is currently limited to Burger's Equation, the methodology can be extended to solve various types of differential equations, including highly non-linear ones. 
+This project focuses on utilizing Physics Informed Neural Networks (PINNs). While the scope is currently limited to Burger's Equation, the methodology can be extended to solve various types of differential equations, including highly non-linear ones. 
 
 ## Introduction
 
